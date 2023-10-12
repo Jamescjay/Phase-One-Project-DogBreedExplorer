@@ -48,4 +48,17 @@ function renderBreeds(dogs) {
 
 function displayDogDetails(dog) {
 
+   document.getElementById("dogImage").src = dog.image_link;
+   document.getElementById("dogName").textContent = dog.name;
+   document.getElementById("dogGrooming").textContent = dog.grooming;
+   document.getElementById("strangerRel").textContent = dog.good_with_strangers;
+   document.getElementById("dogPlayfulness").textContent = dog.playfulness;
+   document.getElementById("dogTrainability").textContent = dog.trainability;
+   document.getElementById("dogEnergy").textContent = dog.energy;
+   document.getElementById("dogBarking").textContent = dog.barking;
+   document.getElementById("maxMale").textContent = dog.max_weight_male;
+   document.getElementById("maxFemale").textContent = dog.max_weight_female;
+   document.getElementById("minMale").textContent = dog.min_weight_male;
+   document.getElementById("minFemale").textContent = dog.min_weight_female;
+
 }
