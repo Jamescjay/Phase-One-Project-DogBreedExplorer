@@ -25,6 +25,22 @@ function renderBreeds(dogs) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
 
+    const img = document.createElement("img");
+    img.classList.add("card-img-top");
+    img.src = dog.image_link;
+    img.alt = dog.name;
+    img.height = 300;
+    cardDiv.appendChild(img);
+
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+    const title = document.createElement("h5");
+    title.textContent = dog.name;
+    cardBody.appendChild(title);
+
+    cardDiv.appendChild(cardBody);
+
+
     parentDiv.appendChild(cardDiv);
     dogList.appendChild(parentDiv);
   });
