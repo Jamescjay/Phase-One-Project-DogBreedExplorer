@@ -46,6 +46,7 @@ function renderBreeds(dogs) {
 
     cardDiv.addEventListener("click", () => {
       displayDogDetails(dog);
+      hideDogCards();
     });
   });
 }
@@ -67,5 +68,9 @@ function displayDogDetails(dog) {
    document.getElementById("maxFemale").textContent = dog.max_weight_female;
    document.getElementById("minMale").textContent = dog.min_weight_male;
    document.getElementById("minFemale").textContent = dog.min_weight_female;
+}
 
+function hideDogCards() {
+  const dogList = document.getElementById("breeds");
+  dogList.style.display = "none";
 }
