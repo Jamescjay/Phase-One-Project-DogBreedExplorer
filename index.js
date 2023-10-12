@@ -43,6 +43,10 @@ function renderBreeds(dogs) {
 
     parentDiv.appendChild(cardDiv);
     dogList.appendChild(parentDiv);
+
+    cardDiv.addEventListener("click", () => {
+      displayDogDetails(dog);
+    });
   });
 }
 
