@@ -17,5 +17,15 @@ function fetchDogBreedDetails(energy = "3") {
 }
 
 function renderBreeds(dogs) {
+  const dogList = document.getElementById("breeds");
+  dogs.forEach((dog) => {
+    const parentDiv = document.createElement("div");
+    parentDiv.classList.add("col");
 
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+
+    parentDiv.appendChild(cardDiv);
+    dogList.appendChild(parentDiv);
+  });
 }
