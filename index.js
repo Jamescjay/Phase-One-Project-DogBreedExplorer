@@ -15,3 +15,7 @@ function fetchDogBreedDetails(energy = "3") {
     .then((response) => response.json())
     .then((result) => renderBreeds(result));
 }
+
+function renderBreeds(dogs) {
+
+}
