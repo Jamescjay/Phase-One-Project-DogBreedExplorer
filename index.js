@@ -45,3 +45,7 @@ function renderBreeds(dogs) {
     dogList.appendChild(parentDiv);
   });
 }
+
+function displayDogDetails(dog) {
+
+}
