@@ -52,6 +52,9 @@ function renderBreeds(dogs) {
 
 function displayDogDetails(dog) {
 
+  const detailsDiv = document.getElementById("details");
+  detailsDiv.style.display = "block";
+
    document.getElementById("dogImage").src = dog.image_link;
    document.getElementById("dogName").textContent = dog.name;
    document.getElementById("dogGrooming").textContent = dog.grooming;
