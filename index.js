@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+   const breedSearchInput = document.getElementById("breedSearch");
+   breedSearchInput.addEventListener("input", searchBreeds);
+  
   fetchDogBreedDetails();
 });
+
+let allBreeds = [];
 
 function fetchDogBreedDetails(energy = "3") {
   const myHeaders = new Headers();
@@ -13,11 +19,16 @@ function fetchDogBreedDetails(energy = "3") {
 
   fetch(`https://api.api-ninjas.com/v1/dogs?energy=${energy}`, requestOptions)
     .then((response) => response.json())
-    .then((result) => renderBreeds(result));
+    .then((result) => {
+      allBreeds =result
+      renderBreeds(allBreeds)
+    });
 }
 
 function renderBreeds(dogs) {
   const dogList = document.getElementById("breeds");
+  dogList.innerHTML = "";
+
   dogs.forEach((dog) => {
     const parentDiv = document.createElement("div");
     parentDiv.classList.add("col");
@@ -73,4 +84,17 @@ function displayDogDetails(dog) {
 function hideDogCards() {
   const dogList = document.getElementById("breeds");
   dogList.style.display = "none";
+}
+
+function searchBreeds() {
+  const searchQuery = document
+    .getElementById("breedSearch")
+    .value.toLowerCase();
+
+  const filteredBreeds = allBreeds.filter((dog) =>
+    dog.name.toLowerCase().includes(searchQuery)
+  );
+
+renderBreeds(filteredBreeds);
+
 }
