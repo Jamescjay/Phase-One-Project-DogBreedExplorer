@@ -22,6 +22,11 @@
   
 }
 
+.bi-heart-fill{
+  color: white;
+  cursor: pointer;
+}
+
 .card {
       cursor: pointer;
     }

@@ -17,6 +17,10 @@
   <div id="details" style="display: none;">
     <h1>Dog Details</h1>
     <img id="dogImage" src="" alt="Dog Image">
+    <p>Click to like <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" onclick="Toggle()" fill="currentColor" class="bi-heart-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+    </svg></span></p>
+
     <p><strong>Name:</strong> <span id="dogName"></span></p>
     <p><strong>Grooming:</strong> <span id="dogGrooming"></span></p>
     <p><strong>Good with Strangers:</strong> <span id="strangerRel"></span></p>
@@ -29,6 +33,17 @@
     <p><strong>Min Weight (Male):</strong> <span id="minMale"></span>Kilograms</p>
     <p><strong>Min Weight (Female):</strong> <span id="minFemale"></span>Kilograms</p>
   </div>
+
+     <script>
+    function Toggle() {
+      const likeButton = document.querySelector(".bi-heart-fill");
+      if (likeButton.style.color === "red") {
+        likeButton.style.color = "white";
+      } else {
+        likeButton.style.color = "red";
+      }
+    }
+  </script>
 
   <script src="index.js"></script>
 </body>
