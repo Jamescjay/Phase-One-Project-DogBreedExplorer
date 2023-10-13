@@ -95,6 +95,10 @@ function searchBreeds() {
     dog.name.toLowerCase().includes(searchQuery)
   );
 
+  if (filteredBreeds.length === 0) {
+    alert(" Error!!! Breed not found, please try another one.");
+  }
+
 renderBreeds(filteredBreeds);
 
 }
