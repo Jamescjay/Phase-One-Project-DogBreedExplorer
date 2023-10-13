@@ -82,9 +82,10 @@ function displayDogDetails(dog) {
 }
 
 function hideDogCards() {
-  const dogList = document.getElementById("breeds");
-  dogList.style.display = "none";
+  const container = document.querySelector(".container");
+  container.style.display = "none";
 }
+
 
 function searchBreeds() {
   const searchQuery = document

@@ -30,3 +30,35 @@
 .card {
       cursor: pointer;
     }
+
+.card:hover {
+  opacity: 0.4;
+}
+
+.bi-heart-fill:hover{
+  opacity: 0.8;
+}
+
+#breedSearch{
+  margin-bottom: 30px;
+  width: 400px;
+  height: 50px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+#note{
+  color: aqua;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+#guide{
+  color: aqua;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: x-large;
+}

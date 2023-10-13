@@ -10,14 +10,16 @@
 <body class="content">
   <div class="container">
     <h1 style="text-align: center;"><strong>DOG BREED MENU</strong></h1>
-    <input type="text" id="breedSearch" placeholder="Search for a dog breed">
+    <span><svg aria-label="Search" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(0, 0, 0)" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Search</title><path d="M18.5 10.5a8 8 0 1 1-8-8 8 8 0 0 1 8 8Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="16.511" x2="21.643" y1="16.511" y2="21.643"></line></svg></span><input type="text" id="breedSearch" placeholder="Search for a dog breed">
+    <p id="guide">Click on a Dog to view its Details</p>
     <div class="row row-cols-1 row-cols-md-4 g-4" id="breeds"></div>
   </div>
 
   <div id="details" style="display: none;">
     <h1>Dog Details</h1>
+    <p id="note">To get back to the MENU, please refresh your page</p>
     <img id="dogImage" src="" alt="Dog Image">
-    <p>Click to like <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" onclick="Toggle()" fill="currentColor" class="bi-heart-fill" viewBox="0 0 16 16">
+    <p style="color: greenyellow;">Click here to like <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" onclick="Toggle()" fill="currentColor" class="bi-heart-fill" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
     </svg></span></p>
 
@@ -41,6 +43,7 @@
         likeButton.style.color = "white";
       } else {
         likeButton.style.color = "red";
+        alert("You liked this Dog");
       }
     }
   </script>
