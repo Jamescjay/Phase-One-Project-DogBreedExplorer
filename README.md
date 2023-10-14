@@ -2,6 +2,9 @@
 
 # Description
 
+# Project link
+ https://jamescjay.github.io/Phase-One-Project-DogBreedExplorer/
+
 # Project Setup
 1. Create a new project folder: make sure to Integrate JavaScript and an external API
 2. Create a new GitHub repository.
